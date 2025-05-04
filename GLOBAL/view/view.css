@@ -1,0 +1,108 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Montserrat-Regular.woff') format('woff'),
+         url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Montserrat-Bold.woff') format('woff'),
+         url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+         url('../assets/fonts/Montserrat-SemiBold.woff') format('woff'),
+         url('../assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  :root {
+    --close-button-size: 3rem;
+    --video-container-size: 80%;
+    --text-size: 1.1rem
+  }
+
+  /* Full-page center layout */
+  body {
+    background-image: url('../../GLOBAL/assets/general/home_horizontal.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    font-family: Arial, sans-serif;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Vertical stack with centered video */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50rem; /* 800px */
+    width: 100%;
+  }
+  
+  /* X Button */
+  .close-button {
+    width: var(--close-button-size);       /* 32px */
+    height: var(--close-button-size);      /* 32px */
+    margin-bottom: 1.25rem; /* 20px */
+  }
+  
+  /* Responsive YouTube video */
+  .video-container {
+    width: var(--video-container-size);
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1.25rem; /* 20px */
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Text below video */
+  .text-container {
+    text-align: center;
+    padding: 0 1.25rem; /* 20px */
+
+  }
+  
+  .text-container p {
+    font-size: var(--text-size);
+    color: #ffffff;
+  }
+
+  /* LARGE MOBILE*/
+@media (min-width: 30rem) {
+    body {
+      background-image: url('../../GLOBAL/assets/general/view_horizontal.webp');
+    }
+}
+
+  /* LARGE MOBILE*/
+  @media (max-width: 30rem) {
+    body {
+      background-image: url('../../GLOBAL/assets/general/view_vertical.webp');
+    }
+}

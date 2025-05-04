@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive YouTube Video</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+    <div class="wrapper">
+        <img src="../assets/general/close.svg" alt="Go Back" class="close-button" onclick="goBack()" style="cursor: pointer;">
+    
+        <div class="video-container">
+          <iframe id="video-player" src="" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+    
+        <div class="text-container">
+          <p id="video-text"></p>
+        </div>
+      </div>
+
+      <script src="view.js"></script>
+</body>
+</html>
