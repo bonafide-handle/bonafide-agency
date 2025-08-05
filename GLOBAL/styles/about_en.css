@@ -571,3 +571,117 @@ footer {
 }
 
 }
+
+
+/* CONTENT */
+.services {
+    margin-top: var(--header-height);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem; /* 20px */
+    padding: 1.25rem; /* 20px */
+    padding-left: 20.5rem;  /* 200px */
+    padding-right: 20.5rem; /* 200px */
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile {
+    width: 100%;
+    position: relative;
+    padding-top: 133.33%; /* 4:3 aspect ratio - keep in % */
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 4px 8px */
+    transition: transform 0.3s ease-out;
+}
+
+.tile:hover {
+    transform: scale(1.02);
+}
+
+.tile-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-title {
+    font-size: 1.2rem; /* 16px */
+    color: #ffffff;
+    line-height: 1.4;
+    margin-top: 0.4rem; /* 10px */
+    text-align: center;
+    padding: 0 0.625rem; /* 10px */
+    text-shadow: #000000;
+}
+
+.service-description {
+    font-size: 1rem; /* 16px */
+    color: #ffffff;
+    line-height: 1.4;
+    margin-top: 0.35rem; /* 10px */
+    text-align: center;
+    padding: 0 0.625rem; /* 10px */
+    text-shadow: #000000;
+}
+
+/* Responsive Styles */
+@media (min-width: 48rem) and (max-width: 75rem) { /* 1200px */
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 6.25rem;  /* 100px */
+        padding-right: 6.25rem; /* 100px */
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-description {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+@media (min-width: 30rem) and (max-width: 48rem) { /* 768px */
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 3.125rem;  /* 50px */
+        padding-right: 3.125rem; /* 50px */
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-description {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+@media (max-width: 30rem) { /* 480px */
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .tile-img {
+        object-position: top;
+    }
+
+    .service-title {
+        font-size: 0.8rem;
+    }
+
+    .service-description {
+        font-size: 0.65rem; /* 14px */
+    }
+}
